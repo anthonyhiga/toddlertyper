@@ -202,9 +202,7 @@ namespace ToddlerTyper
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            //Cursor.Hide();,
-            //Cursor cursor = new Cursor(Directory.GetCurrentDirectory() + "\\Elements\\a.cur");
-            //this.Cursor = cursor;
+            Cursor.Hide();
             drawElementManager.setScreenHeight(this.Height);
             drawElementManager.setScreenWidth(this.Width);
         }
