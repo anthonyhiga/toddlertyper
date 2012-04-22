@@ -59,6 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawTeleportAnimation.cs" />
+    <Compile Include="DrawSpiralAnimation.cs" />
     <Compile Include="DrawMovieElement.cs" />
     <Compile Include="DrawElementRequest.cs" />
     <Compile Include="DrawPulsingImageElement.cs" />

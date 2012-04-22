@@ -192,12 +192,12 @@ namespace ToddlerTyper
             frameCount++;
             frameTotal++;
 
-#if DEBUG
-            string drawString = "Element Count: " + elements.Count + " Frame Rate: " + frameRate + " Last Key: " + lastKey;
+//#if DEBUG
+//            string drawString = "Element Count: " + elements.Count + " Frame Rate: " + frameRate + " Last Key: " + lastKey;
 
-            // Draw string to screen.
-            e.Graphics.DrawString(drawString, drawFont, drawBrush, 30, 0, drawFormat);
-#endif
+//            // Draw string to screen.
+//            e.Graphics.DrawString(drawString, drawFont, drawBrush, 30, 0, drawFormat);
+//#endif
         }
 
         private void MainWindow_Load(object sender, EventArgs e)

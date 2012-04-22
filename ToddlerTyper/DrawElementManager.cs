@@ -180,7 +180,7 @@ namespace ToddlerTyper
             StaticWeightedGenerator(this.CreateDrawSpinAnimationLeftSpeedMid, 1);
             StaticWeightedGenerator(this.CreateDrawSpinAnimationLeftSpeedHigh, 1);
 
-            // these are used to generate moving elements
+            //// these are used to generate moving elements
             AnimatedWeightedGenerator(this.CreateDrawStaticImage, 3);
             AnimatedWeightedGenerator(this.CreateDrawPulsingImage, 3);
             AnimatedWeightedGenerator(this.CreateDrawFallingAnimationSpeedLow, 6);
@@ -189,6 +189,8 @@ namespace ToddlerTyper
             AnimatedWeightedGenerator(this.CreateDrawFloatingAnimation, 9);
             AnimatedWeightedGenerator(this.CreateDrawBouncingAnimation, 9);
             AnimatedWeightedGenerator(this.CreateDrawBorderBounceAnimation, 9);
+            AnimatedWeightedGenerator(this.CreateDrawSpiralAnimation, 9);
+            AnimatedWeightedGenerator(this.CreateDrawTeleportAnimation, 9);
 
             // setup background threads which create elements
             for (int i = 0; i < BACKGROUND_THREADS; i++)
@@ -319,6 +321,18 @@ namespace ToddlerTyper
         {
             DrawElement element = CreateDrawStaticElement(request);
             return new DrawBorderBounceAnimation(request.getCalculatedX(element.getWidth()), request.getCalculatedY(element.getHeight()), screenWidth, screenHeight, element);
+        }
+
+        private DrawElement CreateDrawSpiralAnimation(DrawElementRequest request)
+        {
+            DrawElement element = CreateDrawStaticElement(request);
+            return new DrawSpiralAnimation(request.getCalculatedX(element.getWidth()), request.getCalculatedY(element.getHeight()), screenWidth, screenHeight, element);
+        }
+
+        private DrawElement CreateDrawTeleportAnimation(DrawElementRequest request)
+        {
+            DrawElement element = CreateDrawStaticElement(request);
+            return new DrawTeleportAnimation(request.getCalculatedX(element.getWidth()), request.getCalculatedY(element.getHeight()), screenWidth, screenHeight, element);
         }
     }
 
